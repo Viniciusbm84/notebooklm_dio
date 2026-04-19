@@ -1,7 +1,10 @@
 🏗️ Miniguia de Estudos: Arquitetura de Agentes de IA na Cohab Minas (Agentic RAG, MCP e TurboQuant)
 🎯 Contexto e Objetivos
+
 Este caderno temático foi criado para mapear a viabilidade técnica de implementação de Inteligência Artificial Generativa na Cohab Minas. O ambiente corporativo da instituição conta com sistemas heterogêneos, incluindo dados estruturados (TOTVS Datasul, Probpms da Prodemge) e dados não-estruturados ou semi-estruturados (SEI, Office 365).
+
 Objetivos de Estudo:
+
 Entender como conectar Modelos de Linguagem (LLMs) a esses sistemas proprietários com segurança, resolvendo o problema de integração usando o Model Context Protocol (MCP)
 .
 Compreender a arquitetura de Agentic RAG para permitir que a IA tome decisões autônomas sobre onde buscar a informação
@@ -11,6 +14,7 @@ Analisar o uso do TurboQuant para comprimir o KV Cache, permitindo que a IA leia
 
 --------------------------------------------------------------------------------
 📚 Curadoria de Fontes
+
 As seguintes fontes serviram de base para as pesquisas e foram processadas no NotebookLM para a extração de insights:
 TurboQuant: Redefining AI efficiency with extreme compression (Google Research) - Estudo sobre a compressão extrema do KV Cache para 3-4 bits
 .
@@ -25,6 +29,7 @@ Guia de Fine-Tuning para IA - Documentação sobre como o Fine-Tuning interage (
 
 --------------------------------------------------------------------------------
 🛠️ Engenharia de Prompts e "Cicatrizes" (Troubleshooting)
+
 Durante a exploração do tema, vários testes de prompts foram realizados para extrair o melhor conhecimento da IA. Aqui estão as "cicatrizes" e aprendizados:
 Teste 1: Conectividade de Sistemas Fechados
 Prompt: "Como conectar uma IA ao TOTVS e ao SEI de forma segura?"
@@ -42,6 +47,7 @@ Resultado e Cicatriz: Havia uma dúvida se ao comprimir a memória eu perderia o
 
 --------------------------------------------------------------------------------
 📖 Miniguia de Estudo (Entrega Final)
+
 1. Resumos Estruturados do Assunto
 O que é RAG Agêntico (Agentic RAG)? Diferente de uma simples busca, o Agentic RAG usa um LLM como "cérebro" para raciocinar passo a passo. Ele avalia a pergunta do usuário e escolhe autonomamente qual ferramenta usar. Se a dúvida é financeira, ele converte texto para SQL e busca no TOTVS; se é documental, ele busca no SEI ou Office 365
 .
@@ -66,6 +72,7 @@ TurboQuant: Algoritmo de compressão (Google Research) que encolhe o KV Cache em
 Fine-Tuning: Treinamento adicional dado a um modelo pré-treinado para adaptá-lo a um domínio ou tarefa específica
 .
 3. Conjunto de Prompts Reutilizáveis (Para Revisão)
+   
 Guarde estes prompts para utilizar no ChatGPT, Claude ou NotebookLM e expandir seus estudos no futuro:
 🧠 Prompt para Arquitetura de Software: "Atue como um Engenheiro de IA. Quero criar um fluxo de Agentic RAG conectando um LLM ao meu banco de dados usando o Model Context Protocol (MCP). Descreva um diagrama de arquitetura passo a passo listando os componentes necessários."
 🚀 Prompt para Otimização de Hardware: "Explique, para um gerente de TI não-técnico, a diferença entre o consumo de memória dos Pesos de um Modelo (Weights) e o consumo do KV Cache. Em seguida, explique como o algoritmo TurboQuant resolve a limitação do KV Cache na leitura de grandes documentos."
